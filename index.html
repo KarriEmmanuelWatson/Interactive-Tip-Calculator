@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Tip Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Interactive Tip Calculator</h1>
+  </header>
+
+  <main id="tip-calculator-main">
+    <form id="tip-form">
+      <section aria-labelledby="inputs-heading">
+        <h2 id="inputs-heading">Enter Details</h2>
+
+        <div class="input-group">
+          <label for="bill-input">Bill Amount (₹)</label>
+          <input type="number" id="bill-input" placeholder="0.00" min="0" />
+        </div>
+
+        <div class="input-group">
+          <fieldset>
+            <legend>Select Tip %</legend>
+            <button type="button" class="tip-percent-btn" data-tip="5">5%</button>
+            <button type="button" class="tip-percent-btn" data-tip="10">10%</button>
+            <button type="button" class="tip-percent-btn" data-tip="15">15%</button>
+            <button type="button" class="tip-percent-btn" data-tip="20">20%</button>
+            <button type="button" class="tip-percent-btn" data-tip="25">25%</button>
+            <div class="custom-tip-group">
+              <label for="custom-tip-input" class="visually-hidden">Custom Tip Percentage</label>
+              <input type="number" id="custom-tip-input" placeholder="Custom" min="0" />
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="input-group">
+          <label for="people-input">Number of People</label>
+          <input type="number" id="people-input" placeholder="1" min="1" />
+        </div>
+      </section>
+
+      <section class="output-section" aria-labelledby="results-heading">
+        <h2 id="results-heading">Results</h2>
+
+        <div class="result-item">
+          <div>
+            <p class="result-label">Tip Amount</p>
+            <p class="result-qualifier">/ person</p>
+          </div>
+          <p id="tip-amount-display" class="amount-display" aria-live="polite">₹0.00</p>
+        </div>
+
+        <div class="result-item">
+          <div>
+            <p class="result-label">Total</p>
+            <p class="result-qualifier">/ person</p>
+          </div>
+          <p id="total-amount-display" class="amount-display" aria-live="polite">₹0.00</p>
+        </div>
+
+        <button type="button" id="reset-button">Reset</button>
+      </section>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025  Watson/Interactive Tip Calculator</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
